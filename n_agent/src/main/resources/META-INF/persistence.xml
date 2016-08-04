@@ -1,0 +1,23 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <!-- Will be referenced in Spring Context File -->
+    <persistence-unit name="eclipselink.jpa" transaction-type="RESOURCE_LOCAL">
+        <class>com.svsm.n_agent.persistence.entity.Metric</class>
+        <class>com.svsm.n_agent.persistence.entity.CPU</class>
+        <class>com.svsm.n_agent.persistence.entity.RAM</class>
+        <class>com.svsm.n_agent.persistence.entity.Swap</class>
+        <class>com.svsm.n_agent.persistence.entity.Disk</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/metricdb"/>
+            <property name="javax.persistence.jdbc.user" value="savam" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.password" value="q1w2e3r4" />
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+            <property name="eclipselink.logging.logger" value="org.eclipse.persistence.logging.DefaultSessionLog"/>
+            <property name="eclipselink.logging.level" value="INFO"/>
+        </properties>
+    </persistence-unit>
+</persistence>
