@@ -12,7 +12,6 @@
     <modules>
         <module>n_agent</module>
         <module>r_agent</module>
-        <module>mylog</module>
     </modules>
 
 
